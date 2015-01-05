@@ -1,0 +1,92 @@
+#!/bin/bash
+
+EXTDIR=extension
+ADT=adt
+ASDOC=aasdoc
+
+echo "ADT Version: `$ADT -version`";
+
+EXTENSION=Zzish
+
+EXTPACKAGE=`echo $EXTENSION | sed 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
+
+
+
+PROJECT_ROOT=`pwd`/..
+TARGET=com.distriqt.$EXTENSION.ane
+ASLIB=$PROJECT_ROOT/actionscript
+
+IOS_NATIVELIB=$PROJECT_ROOT/ios/build/Release-iphoneos
+IOS_SIMULATORLIB=$PROJECT_ROOT/ios/build/Release-iphonesimulator
+AND_NATIVELIB=$PROJECT_ROOT/android/release
+DEF_NATIVELIB=$PROJECT_ROOT/default/bin
+
+DEF_SWC=$DEF_NATIVELIB/distriqt.extension.$EXTPACKAGE.default.swc
+
+EXTENSIONXML=extension.xml
+EXTENSIONSWC=$ASLIB/bin/distriqt.extension.$EXTPACKAGE.swc
+EXTENSIONSWF=$EXTDIR/library.swf
+
+#
+# Update Android lib
+if [ ! -d $AND_NATIVELIB ]; then
+	mkdir $AND_NATIVELIB
+fi
+if [ -f $AND_NATIVELIB/../bin/distriqt.extension.$EXTPACKAGE.android.jar ]; then
+	echo "Copying android lib from ../bin folder..."
+	cp -f $AND_NATIVELIB/../bin/distriqt.extension.$EXTPACKAGE.android.jar $AND_NATIVELIB/.
+
+	cp -f $AND_NATIVELIB/../libs/*.jar $AND_NATIVELIB/.
+fi
+
+#
+# Copy AS lib to native directories
+unzip -o -d $ASLIB/bin $EXTENSIONSWC 1>/dev/null
+unzip -o -d $DEF_NATIVELIB $DEF_SWC 1>/dev/null
+rm $ASLIB/bin/catalog.xml
+rm $DEF_NATIVELIB/catalog.xml
+
+cp $ASLIB/bin/library.swf $IOS_NATIVELIB/.
+cp $ASLIB/bin/library.swf $IOS_SIMULATORLIB/.
+cp $ASLIB/bin/library.swf $AND_NATIVELIB/.
+
+#
+# Package the ANE
+echo "Packaging native extension: $TARGET"; 
+$ADT -package \
+		-storetype pkcs12 -keystore ~/Desktop/certs/distriqt_air_selfsign_cert.p12 -storepass d1str1qt \
+		-target ane $TARGET $EXTENSIONXML \
+		-swc $EXTENSIONSWC \
+		-platform iPhone-ARM -platformoptions platform_ios.xml -C $IOS_NATIVELIB . \
+		-platform iPhone-x86 -platformoptions platform_ios.xml -C $IOS_SIMULATORLIB . \
+		-platform Android-ARM -platformoptions platform_android.xml -C $AND_NATIVELIB . \
+		-platform default -C $DEF_NATIVELIB .
+
+echo "...complete";
+
+#
+# Cleanup
+rm $ASLIB/bin/library.swf
+rm $DEF_NATIVELIB/library.swf
+rm $IOS_NATIVELIB/library.swf
+rm $IOS_SIMULATORLIB/library.swf
+rm $AND_NATIVELIB/library.swf
+
+
+#
+# Generate documentation
+echo "Creating documentation...";
+$ASDOC 	-source-path $ASLIB/src \
+		-window-title "distriqt // $EXTENSION" \
+		-main-title "<a href='http://distriqt.com' target='_top'>distriqt</a> // $EXTENSION Native Extension Documentation" \
+		-footer "Copyright <a href='http://distriqt.com' target='_top'>distriqt</a> 2012" \
+		-doc-sources $ASLIB/src \
+		-lenient \
+		-output docs
+echo "...complete";
+
+
+
+
+
+

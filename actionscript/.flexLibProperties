@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.distriqt.extension.zzish.ZzishUserImpl"/>
+    <classEntry path="com.distriqt.extension.zzish.ZzishActivity"/>
+    <classEntry path="com.distriqt.extension.zzish.ZzishUser"/>
+    <classEntry path="com.distriqt.extension.zzish.ZzishActivityImpl"/>
+    <classEntry path="com.distriqt.extension.zzish.ZzishAction"/>
+    <classEntry path="com.distriqt.extension.zzish.events.ZzishEvent"/>
+    <classEntry path="com.distriqt.extension.zzish.ZzishActionImpl"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

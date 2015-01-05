@@ -1,0 +1,30 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+	<id>com.distriqt.Zzish</id>
+	<versionNumber>1</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>distriqt.extension.zzish.android.jar</nativeLibrary>
+				<initializer>com.distriqt.extension.zzish.ZzishExtension</initializer>
+				<finalizer>com.distriqt.extension.zzish.ZzishExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="iPhone-ARM">
+			<applicationDeployment>
+				<nativeLibrary>libZzish.a</nativeLibrary>
+				<initializer>ZzishExtInitializer</initializer>
+				<finalizer>ZzishExtFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="iPhone-x86">
+			<applicationDeployment>
+				<nativeLibrary>libZzish.a</nativeLibrary>
+				<initializer>ZzishExtInitializer</initializer>
+				<finalizer>ZzishExtFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default"> 
+			<applicationDeployment /> 
+		</platform>
+	</platforms>
+</extension>

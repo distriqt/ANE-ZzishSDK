@@ -1,4 +1,12 @@
-ANE-ZzishSDK
-============
+         __       __               __ 
+    ____/ /_ ____/ /______ _ ___  / /_
+   / __  / / ___/ __/ ___/ / __ `/ __/
+  / /_/ / (__  ) / / /  / / /_/ / / 
+  \__,_/_/____/_/ /_/  /_/\__, /_/ 
+                            / / 
+                            \/ 
+  http://distriqt.com
 
-Zzish SDK AIR Native Extension for iOS and Android 
+
+This extension was built by distriqt // 
+

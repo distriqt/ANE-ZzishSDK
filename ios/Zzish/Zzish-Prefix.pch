@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Zzish' target in the 'Zzish' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+    #import "DTZZFREUtils.h"
+#endif

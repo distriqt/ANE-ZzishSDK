@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E300782F1A53B6AA0047B281 /* DTZZUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E300782D1A53B6AA0047B281 /* DTZZUtils.h */; };
+		E30078301A53B6AA0047B281 /* DTZZUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E300782E1A53B6AA0047B281 /* DTZZUtils.m */; };
+		E322EDEE1A5A2A4400F19C21 /* ZZCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDD51A5A2A4400F19C21 /* ZZCallback.h */; };
+		E322EDEF1A5A2A4400F19C21 /* ZZCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDD61A5A2A4400F19C21 /* ZZCallback.m */; };
+		E322EDF01A5A2A4400F19C21 /* ZZDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDD71A5A2A4400F19C21 /* ZZDataService.h */; };
+		E322EDF11A5A2A4400F19C21 /* ZZDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDD81A5A2A4400F19C21 /* ZZDataService.m */; };
+		E322EDF21A5A2A4400F19C21 /* ZZFileService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDD91A5A2A4400F19C21 /* ZZFileService.h */; };
+		E322EDF31A5A2A4400F19C21 /* ZZFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDDA1A5A2A4400F19C21 /* ZZFileService.m */; };
+		E322EDF41A5A2A4400F19C21 /* ZzishAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDDB1A5A2A4400F19C21 /* ZzishAction.h */; };
+		E322EDF51A5A2A4400F19C21 /* ZzishAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDDC1A5A2A4400F19C21 /* ZzishAction.m */; };
+		E322EDF61A5A2A4400F19C21 /* ZzishActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDDD1A5A2A4400F19C21 /* ZzishActivity.h */; };
+		E322EDF71A5A2A4400F19C21 /* ZzishActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDDE1A5A2A4400F19C21 /* ZzishActivity.m */; };
+		E322EDF81A5A2A4400F19C21 /* ZzishSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDDF1A5A2A4400F19C21 /* ZzishSDK.h */; };
+		E322EDF91A5A2A4400F19C21 /* ZzishSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDE01A5A2A4400F19C21 /* ZzishSDK.m */; };
+		E322EDFA1A5A2A4400F19C21 /* ZzishService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDE11A5A2A4400F19C21 /* ZzishService.h */; };
+		E322EDFB1A5A2A4400F19C21 /* ZzishService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDE21A5A2A4400F19C21 /* ZzishService.m */; };
+		E322EDFC1A5A2A4400F19C21 /* ZzishUser.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDE31A5A2A4400F19C21 /* ZzishUser.h */; };
+		E322EDFD1A5A2A4400F19C21 /* ZzishUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDE41A5A2A4400F19C21 /* ZzishUser.m */; };
+		E322EDFE1A5A2A4400F19C21 /* ZZJsonService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDE51A5A2A4400F19C21 /* ZZJsonService.h */; };
+		E322EDFF1A5A2A4400F19C21 /* ZZJsonService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDE61A5A2A4400F19C21 /* ZZJsonService.m */; };
+		E322EE001A5A2A4400F19C21 /* ZZObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDE71A5A2A4400F19C21 /* ZZObject.h */; };
+		E322EE011A5A2A4400F19C21 /* ZZObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDE81A5A2A4400F19C21 /* ZZObject.m */; };
+		E322EE021A5A2A4400F19C21 /* ZZPropertyService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDE91A5A2A4400F19C21 /* ZZPropertyService.h */; };
+		E322EE031A5A2A4400F19C21 /* ZZPropertyService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDEA1A5A2A4400F19C21 /* ZZPropertyService.m */; };
+		E322EE041A5A2A4400F19C21 /* ZZSDKCompatiable.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDEB1A5A2A4400F19C21 /* ZZSDKCompatiable.h */; };
+		E322EE051A5A2A4400F19C21 /* ZZWebService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDEC1A5A2A4400F19C21 /* ZZWebService.h */; };
+		E322EE061A5A2A4400F19C21 /* ZZWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDED1A5A2A4400F19C21 /* ZZWebService.m */; };
+		E3A2C7B91A53904500604924 /* DTZZController.h in Headers */ = {isa = PBXBuildFile; fileRef = E3A2C7B71A53904500604924 /* DTZZController.h */; };
+		E3A2C7BA1A53904500604924 /* DTZZController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C7B81A53904500604924 /* DTZZController.m */; };
+		E3F4A7B6153D8C110057A446 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F4A7B5153D8C110057A446 /* Foundation.framework */; };
+		E3F4A7BC153D8C110057A446 /* Zzish.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F4A7BB153D8C110057A446 /* Zzish.m */; };
+		E3F4A7C3153D8C4A0057A446 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F4A7C2153D8C4A0057A446 /* FlashRuntimeExtensions.h */; };
+		E3F8592D180DF7BB0010F255 /* DTZZFREUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E3F8592B180DF7BB0010F255 /* DTZZFREUtils.h */; };
+		E3F8592E180DF7BB0010F255 /* DTZZFREUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F8592C180DF7BB0010F255 /* DTZZFREUtils.m */; };
+		E3FD7C821898742800881968 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E33692DA17CF44850021F35A /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E300782D1A53B6AA0047B281 /* DTZZUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTZZUtils.h; sourceTree = "<group>"; };
+		E300782E1A53B6AA0047B281 /* DTZZUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTZZUtils.m; sourceTree = "<group>"; };
+		E322EDD51A5A2A4400F19C21 /* ZZCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCallback.h; sourceTree = "<group>"; };
+		E322EDD61A5A2A4400F19C21 /* ZZCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCallback.m; sourceTree = "<group>"; };
+		E322EDD71A5A2A4400F19C21 /* ZZDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDataService.h; sourceTree = "<group>"; };
+		E322EDD81A5A2A4400F19C21 /* ZZDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDataService.m; sourceTree = "<group>"; };
+		E322EDD91A5A2A4400F19C21 /* ZZFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFileService.h; sourceTree = "<group>"; };
+		E322EDDA1A5A2A4400F19C21 /* ZZFileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFileService.m; sourceTree = "<group>"; };
+		E322EDDB1A5A2A4400F19C21 /* ZzishAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzishAction.h; sourceTree = "<group>"; };
+		E322EDDC1A5A2A4400F19C21 /* ZzishAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzishAction.m; sourceTree = "<group>"; };
+		E322EDDD1A5A2A4400F19C21 /* ZzishActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzishActivity.h; sourceTree = "<group>"; };
+		E322EDDE1A5A2A4400F19C21 /* ZzishActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzishActivity.m; sourceTree = "<group>"; };
+		E322EDDF1A5A2A4400F19C21 /* ZzishSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzishSDK.h; sourceTree = "<group>"; };
+		E322EDE01A5A2A4400F19C21 /* ZzishSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzishSDK.m; sourceTree = "<group>"; };
+		E322EDE11A5A2A4400F19C21 /* ZzishService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzishService.h; sourceTree = "<group>"; };
+		E322EDE21A5A2A4400F19C21 /* ZzishService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzishService.m; sourceTree = "<group>"; };
+		E322EDE31A5A2A4400F19C21 /* ZzishUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZzishUser.h; sourceTree = "<group>"; };
+		E322EDE41A5A2A4400F19C21 /* ZzishUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZzishUser.m; sourceTree = "<group>"; };
+		E322EDE51A5A2A4400F19C21 /* ZZJsonService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZJsonService.h; sourceTree = "<group>"; };
+		E322EDE61A5A2A4400F19C21 /* ZZJsonService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZJsonService.m; sourceTree = "<group>"; };
+		E322EDE71A5A2A4400F19C21 /* ZZObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZObject.h; sourceTree = "<group>"; };
+		E322EDE81A5A2A4400F19C21 /* ZZObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZObject.m; sourceTree = "<group>"; };
+		E322EDE91A5A2A4400F19C21 /* ZZPropertyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPropertyService.h; sourceTree = "<group>"; };
+		E322EDEA1A5A2A4400F19C21 /* ZZPropertyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPropertyService.m; sourceTree = "<group>"; };
+		E322EDEB1A5A2A4400F19C21 /* ZZSDKCompatiable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSDKCompatiable.h; sourceTree = "<group>"; };
+		E322EDEC1A5A2A4400F19C21 /* ZZWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZWebService.h; sourceTree = "<group>"; };
+		E322EDED1A5A2A4400F19C21 /* ZZWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZWebService.m; sourceTree = "<group>"; };
+		E33692DA17CF44850021F35A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E3A2C7B71A53904500604924 /* DTZZController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTZZController.h; sourceTree = "<group>"; };
+		E3A2C7B81A53904500604924 /* DTZZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTZZController.m; sourceTree = "<group>"; };
+		E3F4A7B2153D8C110057A446 /* libZzish.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZzish.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F4A7B5153D8C110057A446 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E3F4A7B9153D8C110057A446 /* Zzish-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zzish-Prefix.pch"; sourceTree = "<group>"; };
+		E3F4A7BB153D8C110057A446 /* Zzish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zzish.m; sourceTree = "<group>"; };
+		E3F4A7C2153D8C4A0057A446 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		E3F8592B180DF7BB0010F255 /* DTZZFREUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTZZFREUtils.h; sourceTree = "<group>"; };
+		E3F8592C180DF7BB0010F255 /* DTZZFREUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTZZFREUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3F4A7AF153D8C110057A446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FD7C821898742800881968 /* UIKit.framework in Frameworks */,
+				E3F4A7B6153D8C110057A446 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E322EDD41A5A2A4400F19C21 /* ZzishSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E322EDD51A5A2A4400F19C21 /* ZZCallback.h */,
+				E322EDD61A5A2A4400F19C21 /* ZZCallback.m */,
+				E322EDD71A5A2A4400F19C21 /* ZZDataService.h */,
+				E322EDD81A5A2A4400F19C21 /* ZZDataService.m */,
+				E322EDD91A5A2A4400F19C21 /* ZZFileService.h */,
+				E322EDDA1A5A2A4400F19C21 /* ZZFileService.m */,
+				E322EDDB1A5A2A4400F19C21 /* ZzishAction.h */,
+				E322EDDC1A5A2A4400F19C21 /* ZzishAction.m */,
+				E322EDDD1A5A2A4400F19C21 /* ZzishActivity.h */,
+				E322EDDE1A5A2A4400F19C21 /* ZzishActivity.m */,
+				E322EDDF1A5A2A4400F19C21 /* ZzishSDK.h */,
+				E322EDE01A5A2A4400F19C21 /* ZzishSDK.m */,
+				E322EDE11A5A2A4400F19C21 /* ZzishService.h */,
+				E322EDE21A5A2A4400F19C21 /* ZzishService.m */,
+				E322EDE31A5A2A4400F19C21 /* ZzishUser.h */,
+				E322EDE41A5A2A4400F19C21 /* ZzishUser.m */,
+				E322EDE51A5A2A4400F19C21 /* ZZJsonService.h */,
+				E322EDE61A5A2A4400F19C21 /* ZZJsonService.m */,
+				E322EDE71A5A2A4400F19C21 /* ZZObject.h */,
+				E322EDE81A5A2A4400F19C21 /* ZZObject.m */,
+				E322EDE91A5A2A4400F19C21 /* ZZPropertyService.h */,
+				E322EDEA1A5A2A4400F19C21 /* ZZPropertyService.m */,
+				E322EDEB1A5A2A4400F19C21 /* ZZSDKCompatiable.h */,
+				E322EDEC1A5A2A4400F19C21 /* ZZWebService.h */,
+				E322EDED1A5A2A4400F19C21 /* ZZWebService.m */,
+			);
+			path = ZzishSDK;
+			sourceTree = "<group>";
+		};
+		E33692D717CF44420021F35A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3F8592B180DF7BB0010F255 /* DTZZFREUtils.h */,
+				E3F8592C180DF7BB0010F255 /* DTZZFREUtils.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E3F4A7A7153D8C110057A446 = {
+			isa = PBXGroup;
+			children = (
+				E3F4A7B7153D8C110057A446 /* Zzish */,
+				E3F4A7B4153D8C110057A446 /* Frameworks */,
+				E3F4A7B3153D8C110057A446 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3F4A7B3153D8C110057A446 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4A7B2153D8C110057A446 /* libZzish.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3F4A7B4153D8C110057A446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E33692DA17CF44850021F35A /* UIKit.framework */,
+				E3F4A7B5153D8C110057A446 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3F4A7B7153D8C110057A446 /* Zzish */ = {
+			isa = PBXGroup;
+			children = (
+				E322EDD41A5A2A4400F19C21 /* ZzishSDK */,
+				E33692D717CF44420021F35A /* utils */,
+				E3F4A7BB153D8C110057A446 /* Zzish.m */,
+				E3F4A7B8153D8C110057A446 /* Supporting Files */,
+				E3A2C7B71A53904500604924 /* DTZZController.h */,
+				E3A2C7B81A53904500604924 /* DTZZController.m */,
+				E300782D1A53B6AA0047B281 /* DTZZUtils.h */,
+				E300782E1A53B6AA0047B281 /* DTZZUtils.m */,
+			);
+			path = Zzish;
+			sourceTree = "<group>";
+		};
+		E3F4A7B8153D8C110057A446 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3F4A7C2153D8C4A0057A446 /* FlashRuntimeExtensions.h */,
+				E3F4A7B9153D8C110057A446 /* Zzish-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E3F4A7B0153D8C110057A446 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E322EDFA1A5A2A4400F19C21 /* ZzishService.h in Headers */,
+				E322EDF21A5A2A4400F19C21 /* ZZFileService.h in Headers */,
+				E322EDF41A5A2A4400F19C21 /* ZzishAction.h in Headers */,
+				E322EDF81A5A2A4400F19C21 /* ZzishSDK.h in Headers */,
+				E300782F1A53B6AA0047B281 /* DTZZUtils.h in Headers */,
+				E3A2C7B91A53904500604924 /* DTZZController.h in Headers */,
+				E322EDF01A5A2A4400F19C21 /* ZZDataService.h in Headers */,
+				E322EE001A5A2A4400F19C21 /* ZZObject.h in Headers */,
+				E322EDEE1A5A2A4400F19C21 /* ZZCallback.h in Headers */,
+				E322EDFE1A5A2A4400F19C21 /* ZZJsonService.h in Headers */,
+				E322EDFC1A5A2A4400F19C21 /* ZzishUser.h in Headers */,
+				E3F8592D180DF7BB0010F255 /* DTZZFREUtils.h in Headers */,
+				E322EDF61A5A2A4400F19C21 /* ZzishActivity.h in Headers */,
+				E3F4A7C3153D8C4A0057A446 /* FlashRuntimeExtensions.h in Headers */,
+				E322EE021A5A2A4400F19C21 /* ZZPropertyService.h in Headers */,
+				E322EE041A5A2A4400F19C21 /* ZZSDKCompatiable.h in Headers */,
+				E322EE051A5A2A4400F19C21 /* ZZWebService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E3F4A7B1153D8C110057A446 /* Zzish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3F4A7BF153D8C110057A446 /* Build configuration list for PBXNativeTarget "Zzish" */;
+			buildPhases = (
+				E3F4A7AE153D8C110057A446 /* Sources */,
+				E3F4A7AF153D8C110057A446 /* Frameworks */,
+				E3F4A7B0153D8C110057A446 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zzish;
+			productName = Zzish;
+			productReference = E3F4A7B2153D8C110057A446 /* libZzish.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3F4A7A9153D8C110057A446 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = distriqt;
+			};
+			buildConfigurationList = E3F4A7AC153D8C110057A446 /* Build configuration list for PBXProject "Zzish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E3F4A7A7153D8C110057A446;
+			productRefGroup = E3F4A7B3153D8C110057A446 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3F4A7B1153D8C110057A446 /* Zzish */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3F4A7AE153D8C110057A446 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30078301A53B6AA0047B281 /* DTZZUtils.m in Sources */,
+				E322EDFF1A5A2A4400F19C21 /* ZZJsonService.m in Sources */,
+				E3A2C7BA1A53904500604924 /* DTZZController.m in Sources */,
+				E322EDEF1A5A2A4400F19C21 /* ZZCallback.m in Sources */,
+				E322EDF31A5A2A4400F19C21 /* ZZFileService.m in Sources */,
+				E3F4A7BC153D8C110057A446 /* Zzish.m in Sources */,
+				E322EDFD1A5A2A4400F19C21 /* ZzishUser.m in Sources */,
+				E3F8592E180DF7BB0010F255 /* DTZZFREUtils.m in Sources */,
+				E322EE011A5A2A4400F19C21 /* ZZObject.m in Sources */,
+				E322EDF51A5A2A4400F19C21 /* ZzishAction.m in Sources */,
+				E322EDF91A5A2A4400F19C21 /* ZzishSDK.m in Sources */,
+				E322EDFB1A5A2A4400F19C21 /* ZzishService.m in Sources */,
+				E322EE061A5A2A4400F19C21 /* ZZWebService.m in Sources */,
+				E322EDF71A5A2A4400F19C21 /* ZzishActivity.m in Sources */,
+				E322EDF11A5A2A4400F19C21 /* ZZDataService.m in Sources */,
+				E322EE031A5A2A4400F19C21 /* ZZPropertyService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E3F4A7BD153D8C110057A446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E3F4A7BE153D8C110057A446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3F4A7C0153D8C110057A446 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Zzish.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Zzish",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zzish/Zzish-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E3F4A7C1153D8C110057A446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Zzish.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Zzish",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zzish/Zzish-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3F4A7AC153D8C110057A446 /* Build configuration list for PBXProject "Zzish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F4A7BD153D8C110057A446 /* Debug */,
+				E3F4A7BE153D8C110057A446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3F4A7BF153D8C110057A446 /* Build configuration list for PBXNativeTarget "Zzish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3F4A7C0153D8C110057A446 /* Debug */,
+				E3F4A7C1153D8C110057A446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3F4A7A9153D8C110057A446 /* Project object */;
+}
