@@ -50,7 +50,7 @@ public class ZzishController
 	{
 		_context = context;
 		_activities = new ArrayList<ZZActivity>();
-		_actions = new ArrayList<ZZAction>();
+		_actions    = new ArrayList<ZZAction>();
 	}
 	
 	
@@ -87,7 +87,7 @@ public class ZzishController
 	
 	public String storeActivity( ZZActivity activity )
 	{
-		String activityId = String.format( "%d", _activities.size() );
+		String activityId = Integer.toString( _activities.size() );
 		_activities.add( activity );
 		return activityId;
 	}
@@ -104,7 +104,7 @@ public class ZzishController
 	
 	public String storeAction( ZZAction action )
 	{
-		String actionId = String.format( "%d", _actions.size() );
+		String actionId = Integer.toString( _actions.size() );
 		_actions.add( action );
 		return actionId;
 	}

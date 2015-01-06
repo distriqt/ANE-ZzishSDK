@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ZzishSDK/ZzishSDK.h"
 
-@interface DTZZController : NSObject <ZZCallbackDelegate>
+@interface DTZZController : NSObject
 {
     NSMutableArray* _users;
     NSMutableArray* _activities;

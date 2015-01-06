@@ -47,11 +47,6 @@
 
 
 /*!
- * @discussion Save the activity
- */
-- (void)save;
-
-/*!
  * @discussion Set the score of the action
  * @param score a float value representing the score
  */

@@ -22,6 +22,4 @@
 
 @interface ZzishSDK : NSObject
 
-+ (BOOL)connected;
-
 @end

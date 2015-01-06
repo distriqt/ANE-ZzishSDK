@@ -51,10 +51,14 @@ public class CreateActionFunction implements FREFunction
 				
 				result = ZzishUtils.freObjectFromZzishAction( action, actionId );
 			}
+			else
+			{
+				FREUtils.log( TAG, "ERROR::Could not find activity" );
+			}
 		}
 		catch (Exception e)
 		{
-			FREUtils.handleException(context, e);
+			FREUtils.handleException( context, e );
 		}
 		return result;
 	}

@@ -12,23 +12,12 @@
 #import "ZzishAction.h"
 #import "ZZWebService.h"
 
-@protocol ZZCallbackDelegate <NSObject>
-@required
-- (void) processZzishResponse:(int)status andMessage:(NSString *)message;
-@end
+@interface ZzishService : NSObject
 
-@interface ZzishService : NSObject<ZZWebCallbackDelegate>
-{
-    id <ZZCallbackDelegate> delegate;
-}
-
-@property (retain) id delegate;
-
-+ (void)startWithApplicationId:(NSString *)applicationId;
++ (void)startWithApplicationId:(NSString *)applicationId withBlock: (void (^) (NSDictionary *response)) block;
 + (ZzishUser *)user:(NSString *)user;
-+ (void)delegate:(id)delegate;
-
-+ (void)saveUser:(ZzishUser*)user;
-+ (void)sendMessage:(ZzishUser *)user withActivivity:(ZzishActivity *)activity forVerb:(NSString *)verbName withAction:(ZzishAction*)action;
++ (void)saveUser:(ZzishUser*)user withBlock: (void (^) (NSDictionary *response)) block;
++ (void)sendMessage:(ZzishUser *)user withActivivity:(ZzishActivity *)activity forVerb:(NSString *)verbName withAction:(ZzishAction*)action withBlock: (void (^) (NSDictionary *response)) block;
++ (BOOL)connected;
 
 @end

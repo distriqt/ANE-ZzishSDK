@@ -60,6 +60,10 @@ public class SaveFunction implements FREFunction
 					}
 				});
 			}
+			else
+			{
+				FREUtils.log( TAG, "ERROR::Could not find action" );
+			}
 		}
 		catch (Exception e)
 		{

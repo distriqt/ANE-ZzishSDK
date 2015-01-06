@@ -9,21 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "ZZCallback.h"
 
-@protocol ZZWebCallbackDelegate <NSObject>
-@required
-- (void) process: (NSDictionary *)response;
-@end
-
-
 @interface ZZWebService : NSObject<NSURLConnectionDelegate>
-{
-    id <ZZWebCallbackDelegate> delegate;
-}
 
-@property (retain) id delegate;
-
-- (void)upload:(NSDictionary*)command;
-
+- (void)upload:(NSDictionary*)command withBlock: (void (^) (NSDictionary *response)) block;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
 

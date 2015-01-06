@@ -34,6 +34,8 @@
 		E322EE041A5A2A4400F19C21 /* ZZSDKCompatiable.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDEB1A5A2A4400F19C21 /* ZZSDKCompatiable.h */; };
 		E322EE051A5A2A4400F19C21 /* ZZWebService.h in Headers */ = {isa = PBXBuildFile; fileRef = E322EDEC1A5A2A4400F19C21 /* ZZWebService.h */; };
 		E322EE061A5A2A4400F19C21 /* ZZWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = E322EDED1A5A2A4400F19C21 /* ZZWebService.m */; };
+		E35E0F941A5B6FA0002774EC /* DTZZEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E35E0F921A5B6FA0002774EC /* DTZZEvent.h */; };
+		E35E0F951A5B6FA0002774EC /* DTZZEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E35E0F931A5B6FA0002774EC /* DTZZEvent.m */; };
 		E3A2C7B91A53904500604924 /* DTZZController.h in Headers */ = {isa = PBXBuildFile; fileRef = E3A2C7B71A53904500604924 /* DTZZController.h */; };
 		E3A2C7BA1A53904500604924 /* DTZZController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C7B81A53904500604924 /* DTZZController.m */; };
 		E3F4A7B6153D8C110057A446 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F4A7B5153D8C110057A446 /* Foundation.framework */; };
@@ -73,6 +75,8 @@
 		E322EDEC1A5A2A4400F19C21 /* ZZWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZWebService.h; sourceTree = "<group>"; };
 		E322EDED1A5A2A4400F19C21 /* ZZWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZWebService.m; sourceTree = "<group>"; };
 		E33692DA17CF44850021F35A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E35E0F921A5B6FA0002774EC /* DTZZEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTZZEvent.h; path = events/DTZZEvent.h; sourceTree = "<group>"; };
+		E35E0F931A5B6FA0002774EC /* DTZZEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTZZEvent.m; path = events/DTZZEvent.m; sourceTree = "<group>"; };
 		E3A2C7B71A53904500604924 /* DTZZController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTZZController.h; sourceTree = "<group>"; };
 		E3A2C7B81A53904500604924 /* DTZZController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTZZController.m; sourceTree = "<group>"; };
 		E3F4A7B2153D8C110057A446 /* libZzish.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZzish.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		E35E0F911A5B6F79002774EC /* events */ = {
+			isa = PBXGroup;
+			children = (
+				E35E0F921A5B6FA0002774EC /* DTZZEvent.h */,
+				E35E0F931A5B6FA0002774EC /* DTZZEvent.m */,
+			);
+			name = events;
+			sourceTree = "<group>";
+		};
 		E3F4A7A7153D8C110057A446 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		E3F4A7B7153D8C110057A446 /* Zzish */ = {
 			isa = PBXGroup;
 			children = (
+				E35E0F911A5B6F79002774EC /* events */,
 				E322EDD41A5A2A4400F19C21 /* ZzishSDK */,
 				E33692D717CF44420021F35A /* utils */,
 				E3F4A7BB153D8C110057A446 /* Zzish.m */,
@@ -208,6 +222,7 @@
 				E322EDFC1A5A2A4400F19C21 /* ZzishUser.h in Headers */,
 				E3F8592D180DF7BB0010F255 /* DTZZFREUtils.h in Headers */,
 				E322EDF61A5A2A4400F19C21 /* ZzishActivity.h in Headers */,
+				E35E0F941A5B6FA0002774EC /* DTZZEvent.h in Headers */,
 				E3F4A7C3153D8C4A0057A446 /* FlashRuntimeExtensions.h in Headers */,
 				E322EE021A5A2A4400F19C21 /* ZZPropertyService.h in Headers */,
 				E322EE041A5A2A4400F19C21 /* ZZSDKCompatiable.h in Headers */,
@@ -276,6 +291,7 @@
 				E3F8592E180DF7BB0010F255 /* DTZZFREUtils.m in Sources */,
 				E322EE011A5A2A4400F19C21 /* ZZObject.m in Sources */,
 				E322EDF51A5A2A4400F19C21 /* ZzishAction.m in Sources */,
+				E35E0F951A5B6FA0002774EC /* DTZZEvent.m in Sources */,
 				E322EDF91A5A2A4400F19C21 /* ZzishSDK.m in Sources */,
 				E322EDFB1A5A2A4400F19C21 /* ZzishService.m in Sources */,
 				E322EE061A5A2A4400F19C21 /* ZZWebService.m in Sources */,

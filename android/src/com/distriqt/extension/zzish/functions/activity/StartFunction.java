@@ -56,6 +56,10 @@ public class StartFunction implements FREFunction
 					}
 				});
 			}
+			else
+			{
+				FREUtils.log( TAG, "ERROR::Could not find activity" );
+			}
 		}
 		catch (Exception e)
 		{

@@ -73,8 +73,6 @@
 
 @implementation ZzishSDK
 
-+ (BOOL)connected {
-    return YES;
-}
+
 
 @end

@@ -134,6 +134,11 @@ FREObject Zzish_User_SetName(FREContext ctx, void* funcData, uint32_t argc, FREO
         
         ZzishUser* user = [distriqt_zzish_controller createUser: userId];
         user.name = name;
+        [user saveWithBlock:^(NSDictionary *response)
+        {
+            
+            
+        }];
         
         result = [DTZZFREUtils newFREObjectFromBoolean: true];
     }
@@ -158,7 +163,10 @@ FREObject Zzish_Activity_Start(FREContext ctx, void* funcData, uint32_t argc, FR
         {
             activity.groupCode = groupCode;
         
-            [activity start];
+            [activity startWithBlock:^(NSDictionary *response) {
+                
+                
+            }];
         }
     }
     return result;
@@ -177,7 +185,10 @@ FREObject Zzish_Activity_Stop(FREContext ctx, void* funcData, uint32_t argc, FRE
         
         if (activity != nil)
         {
-            [activity stop];
+            [activity stopWithBlock:^(NSDictionary *response) {
+                
+                
+            }];
         }
     }
     return result;
@@ -196,7 +207,10 @@ FREObject Zzish_Activity_Cancel(FREContext ctx, void* funcData, uint32_t argc, F
         
         if (activity != nil)
         {
-            [activity cancel];
+            [activity cancelWithBlock:^(NSDictionary *response) {
+                
+                
+            }];
         }
     }
     return result;
@@ -252,7 +266,8 @@ FREObject Zzish_Action_Save(FREContext ctx, void* funcData, uint32_t argc, FREOb
             action.response = response;
             action.score    = (float)score;
             
-            [action save];
+            [action saveWithBlock:^(NSDictionary *response) {
+            }];
         }
         
     }

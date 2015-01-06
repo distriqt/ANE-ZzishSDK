@@ -1,5 +1,6 @@
 <platform xmlns="http://ns.adobe.com/air/extension/4.0">
 	<packagedDependencies>
+		<packagedDependency>gson-2.3.1.jar</packagedDependency>
 		<packagedDependency>Zzish.jar</packagedDependency>
 	</packagedDependencies>
 	<packagedResources>

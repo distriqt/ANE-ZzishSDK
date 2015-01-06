@@ -41,7 +41,7 @@
     return [self.dictionary copy];
 }
 
-- (void)save {
+- (void)saveWithBlock: (void (^) (NSDictionary *response)) block {
     [ZZDataService save:self];
 }
 

@@ -13,17 +13,21 @@
 
 #define BASE_URL @"http://api.zzish.co.uk/api/"
 
-@interface ZZWebService()
+typedef void(^MyCustomBlockType)(NSDictionary* response);
+
+@interface ZZWebService() {
+    MyCustomBlockType block;
+}
 
 @property (strong,nonatomic) NSMutableData* responseData;
+@property (nonatomic, copy) MyCustomBlockType block;
 
 @end
 
 @implementation ZZWebService
 
-@synthesize delegate;
-
-- (void)upload:(NSDictionary*)command {
+- (void)upload:(NSDictionary*)command withBlock: (void (^) (NSDictionary *response)) mblock {
+    self.block = mblock;
     NSString* endpoint = command[ENDPOINT_PARAM];
     NSString* data =     command[DATA_PARAM];
     [self upload:endpoint withJSON:data];
@@ -71,7 +75,7 @@
     // You can parse the stuff in your instance variable now
     NSError *e;
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:_responseData options:kNilOptions error:&e];
-    [self.delegate process:object];
+    self.block(object);
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

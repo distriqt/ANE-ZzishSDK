@@ -21,6 +21,7 @@ import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.distriqt.extension.zzish.ZzishContext;
 import com.distriqt.extension.zzish.util.FREUtils;
+import com.zzish.platform.sdk.ZZCallback;
 import com.zzish.platform.sdk.ZZUser;
 
 public class SetNameFunction implements FREFunction
@@ -39,6 +40,13 @@ public class SetNameFunction implements FREFunction
 			
 			ZZUser user = ((ZzishContext)context).controller().createUser( userId );
 			user.setName( name );
+			user.save( new ZZCallback()
+			{
+				@Override
+				public void processResponse( int arg0, String arg1 )
+				{
+				}
+			});
 			
 			result = FREObject.newObject( true );
 		}

@@ -7,6 +7,7 @@
 //
 
 #import "DTZZController.h"
+#import "DTZZEvent.h"
 
 #import "ZzishSDK/ZzishSDK.h"
 
@@ -47,8 +48,24 @@
 {
     [DTZZFREUtils log: @"DTZZController::startWithApplicationId: %@", applicationId];
     
-    [Zzish delegate: self];
-    [Zzish startWithApplicationId: applicationId];
+    [Zzish startWithApplicationId: applicationId withBlock:^(NSDictionary *response)
+    {
+        [DTZZFREUtils log: @"DTZZController::startWithApplicationId:callback %@", response ];
+        
+        if ([[response objectForKey: @"status"] isEqualToNumber: [NSNumber numberWithInt: 200]])
+        {
+            [DTZZFREUtils dispatchStatusEvent: context
+                                         code: DTZZEVENT_SETUP_SUCCESS
+                                        level: @"" ];
+        }
+        else
+        {
+            [DTZZFREUtils dispatchStatusEvent: context
+                                         code: DTZZEVENT_SETUP_FAILED
+                                        level: [response objectForKey: @"message"]];
+        }
+        
+    }];
 }
 
 
@@ -103,13 +120,13 @@
 
 
 
-#pragma mark - ZZCallbackDelegate
-
-
--(void) processZzishResponse:(int)status andMessage:(NSString *)message
-{
-    [DTZZFREUtils log: @"DTZZController::processZzishResponse: %d andMessage: %@", status, message ];
-}
+//#pragma mark - ZZCallbackDelegate
+//
+//
+//-(void) processZzishResponse:(int)status andMessage:(NSString *)message
+//{
+//    [DTZZFREUtils log: @"DTZZController::processZzishResponse: %d andMessage: %@", status, message ];
+//}
 
 
 

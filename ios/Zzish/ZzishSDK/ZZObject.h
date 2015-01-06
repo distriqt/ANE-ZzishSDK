@@ -35,7 +35,8 @@
 
 /*!
  * @discussion saves the ZZobject. Updates it if already exists. Uploads to server if connected
+ * @param block The Block to return after saving (success and message values)
  */
-- (void)save;
+- (void)saveWithBlock: (void (^) (NSDictionary *response)) block;
 
 @end

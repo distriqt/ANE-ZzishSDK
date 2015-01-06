@@ -78,8 +78,8 @@
     return [self.correctObject boolValue];
 }
 
-- (void)save {
-    [ZzishService sendMessage:self.activity.user withActivivity:self.activity forVerb:@"http://activitystrea.ms/schema/1.0/start" withAction:self];
+- (void)saveWithBlock: (void (^) (NSDictionary *response)) block {
+    [ZzishService sendMessage:self.activity.user withActivivity:self.activity forVerb:@"http://activitystrea.ms/schema/1.0/start" withAction:self withBlock:block];
 }
 
 - (NSDictionary *)tincan {

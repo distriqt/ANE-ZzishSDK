@@ -12,16 +12,16 @@
 
 @implementation ZzishActivity
 
-- (void)start {
-    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/start" withAction:nil];
+- (void)startWithBlock: (void (^) (NSDictionary *response)) block {
+    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/start" withAction:nil withBlock:block];
 }
 
-- (void)stop {
-    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/complete" withAction:nil];
+- (void)stopWithBlock: (void (^) (NSDictionary *response)) block {
+    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/complete" withAction:nil withBlock:block];
 }
 
-- (void)cancel {
-    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/cancel" withAction:nil];
+- (void)cancelWithBlock: (void (^) (NSDictionary *response)) block {
+    [ZzishService sendMessage:self.user withActivivity:self forVerb:@"http://activitystrea.ms/schema/1.0/cancel" withAction:nil withBlock:block];
 }
 
 - (ZzishAction *)createAction:(NSString *)name {

@@ -7,16 +7,16 @@
 //
 
 #import "ZzishUser.h"
-#import "ZzishSDK.h"
 #import "ZZPropertyService.h"
+#import "ZzishService.h"
 
 @implementation ZzishUser
 
 /*!
  * @discussion Upload contents to serve
  */
-- (void)save {
-    [ZzishService saveUser:self];
+- (void)saveWithBlock: (void (^) (NSDictionary *response)) block {
+    [ZzishService saveUser:self withBlock:block];
 }
 
 + (ZzishUser *) currentUser {

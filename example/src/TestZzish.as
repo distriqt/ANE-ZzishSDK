@@ -37,8 +37,8 @@ package
 	 */
 	public class TestZzish extends Sprite
 	{
-		
-		public static const ZZISH_APPLICATION_ID	: String = "zvzQqQ5KciYq3HDejYOV2onR4mMa";
+		public static const ZZISH_APPLICATION_ID	: String = "e2593e40-56b7-4d32-ae0d-68586413d684";
+		public static const ZZISH_CLASS_CODE		: String = "b6t";
 		
 		
 		/**
@@ -47,7 +47,10 @@ package
 		public function TestZzish()
 		{
 			super();
-			create();
+			
+			stage.align = StageAlign.TOP_LEFT;
+			stage.scaleMode = StageScaleMode.NO_SCALE;
+
 			init();
 		}
 		
@@ -63,33 +66,21 @@ package
 		//	INITIALISATION
 		//	
 		
-		private function create( ):void
+		private function init( ):void
 		{
-			stage.align = StageAlign.TOP_LEFT;
-			stage.scaleMode = StageScaleMode.NO_SCALE;
-			
-			var tf:TextFormat = new TextFormat();
-			tf.size = 24;
+			// 
+			//	Create a text field to display some output
+			var tf:TextFormat = new TextFormat( null, 24 );
 			_text = new TextField();
 			_text.defaultTextFormat = tf;
 			addChild( _text );
-
-			stage.addEventListener( Event.RESIZE, stage_resizeHandler, false, 0, true );
-			stage.addEventListener( MouseEvent.CLICK, mouseClickHandler, false, 0, true );
 			
-		}
-		
-		
-		private function init( ):void
-		{
+			//
+			//	Setting up the Zzish service listeners and setting the application id
 			try
 			{
 				message( "Zzish Supported: " + Zzish.isSupported );
 				message( "Zzish Version:   " + Zzish.service.version );
-				
-				//
-				//	Add tests here
-				//
 				
 				Zzish.service.addEventListener( ZzishEvent.SETUP_SUCCESS, zzish_setupSuccessHandler );
 				Zzish.service.addEventListener( ZzishEvent.SETUP_FAILED,  zzish_setupFailedHandler );
@@ -101,6 +92,9 @@ package
 			{
 				message( "ERROR::"+e.message );
 			}
+
+			stage.addEventListener( Event.RESIZE, stage_resizeHandler, false, 0, true );
+			stage.addEventListener( MouseEvent.CLICK, mouseClickHandler, false, 0, true );
 		}
 		
 		
@@ -122,26 +116,33 @@ package
 		private function stage_resizeHandler( event:Event ):void
 		{
 			_text.width  = stage.stageWidth;
-			_text.height = stage.stageHeight - 100;
+			_text.height = stage.stageHeight;
 		}
 		
 		
 		private function mouseClickHandler( event:MouseEvent ):void
 		{
+			message( "Perform simple test" );
+			
 			//
-			//	Do something when user clicks screen?
-			//	
+			//	Create a user
+			var user:ZzishUser = Zzish.service.createUser( "0333AF2_"+Zzish.service.version );
+			user.name = "Test User (" + Zzish.service.version+")";
+
 			
-			var user:ZzishUser = Zzish.service.createUser( "0333AF" );
-			user.name = "Test User";
-			
+			//
+			//	Create an activity
 			var activity:ZzishActivity = user.createActivity( "Starting ANE Development" );
-			activity.groupCode = "DEV101";
+			activity.groupCode = ZZISH_CLASS_CODE;
 			activity.start();
+
 			
+			//
+			//	Create an action
 			var action:ZzishAction = activity.createAction( "Question 1" );
 			action.response = "a great response";
-			action.correct = false;
+			action.correct = (Math.random() > 0.5);
+			action.score = Math.floor(Math.random() * 100);
 			action.save();
 			
 		}
@@ -154,12 +155,12 @@ package
 		
 		private function zzish_setupSuccessHandler( event:ZzishEvent ):void
 		{
-			
+			message( "zzish_setupSuccessHandler::"+event.status + "::"+event.message );
 		}
 		
 		private function zzish_setupFailedHandler( event:ZzishEvent ):void
 		{
-			
+			message( "zzish_setupFailedHandler::"+event.status + "::"+event.message );
 		}
 		
 	}

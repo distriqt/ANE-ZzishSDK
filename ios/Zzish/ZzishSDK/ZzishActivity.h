@@ -28,18 +28,21 @@
 
 /*!
  * @discussion Start the activity
+ * @param An optional block to process response when method is finished
  */
-- (void)start;
+- (void)startWithBlock: (void (^) (NSDictionary *response)) block;
 
 /*!
  * @discussion Stop the activity
+ * @param An optional block to process response when method is finished
  */
-- (void)stop;
+- (void)stopWithBlock: (void (^) (NSDictionary *response)) block;
 
 /*!
  * @discussion Cancel the activity
+ * @param An optional block to process response when method is finished
  */
-- (void)cancel;
+- (void)cancelWithBlock: (void (^) (NSDictionary *response)) block;
 
 /*!
  * @discussion Create an action for this activity

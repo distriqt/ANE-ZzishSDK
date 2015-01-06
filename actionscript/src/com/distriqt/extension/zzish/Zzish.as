@@ -35,7 +35,6 @@ package com.distriqt.extension.zzish
 		//
 		//	ID and Version numbers
 		public static const EXT_CONTEXT_ID			: String = "com.distriqt.Zzish";
-		private static const EXT_ID_NUMBER			: int = -1;
 		
 		public static const VERSION					: String = "1";
 		public static const VERSION_DEFAULT			: String = "0";
@@ -59,7 +58,6 @@ package com.distriqt.extension.zzish
 				try
 				{
 					_extensionId = EXT_CONTEXT_ID;
-					_extensionIdNumber = EXT_ID_NUMBER;
 					_extContext = ExtensionContext.createExtensionContext( EXT_CONTEXT_ID, null );
 					_extContext.addEventListener( StatusEvent.STATUS, extension_statusHandler, false, 0, true );
 				}
@@ -79,10 +77,9 @@ package com.distriqt.extension.zzish
 		//	VARIABLES
 		//
 		
-		protected static var _extContext	: ExtensionContext = null;
+		private static var _extContext	: ExtensionContext = null;
 		
-		protected var _extensionId			: String = "";
-		protected var _extensionIdNumber	: int = -1;
+		private var _extensionId		: String = "";
 		
 		//
 		// Singleton variables
