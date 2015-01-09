@@ -54,7 +54,7 @@ cp $ASLIB/bin/library.swf $AND_NATIVELIB/.
 # Package the ANE
 echo "Packaging native extension: $TARGET"; 
 $ADT -package \
-		-storetype pkcs12 -keystore ~/Desktop/certs/distriqt_air_selfsign_cert.p12 -storepass d1str1qt \
+		-storetype pkcs12 -keystore certificate.p12 -storepass password \
 		-target ane $TARGET $EXTENSIONXML \
 		-swc $EXTENSIONSWC \
 		-platform iPhone-ARM -platformoptions platform_ios.xml -C $IOS_NATIVELIB . \
